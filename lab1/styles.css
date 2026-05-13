@@ -1,8 +1,17 @@
 /* Base reset */
-
+/* =============================================================
+       STUDENT TASKS
+       1.) Pick a Coolors palette and define: --base, --text, --secondary, --primary, --accent using CSS variables 
+       2.) Implement background image in .hero and add parallax-like effect
+       3.) Apply colours using CSS variables & var( )
+       4.) Ensure WCAG AA contrast
+    ============================================================= */
 :root {
     --primary: #EEEEEE;
     --secondary:#0073e6;
+    --base:#C9996B;
+    --text:#5C4F4A;
+    --accent:#5C766D;
 }
 
 *,
@@ -74,15 +83,10 @@ header {
 .nav a {
     padding: .5rem .75rem;
     border-radius: .5rem;
+    color:var(--accent);
 }
 
-/* =============================================================
-       STUDENT TASKS
-       1.) Pick a Coolors palette and define: --base, --text, --secondary, --primary, --accent using CSS variables 
-       2.) Implement background image in .hero and add parallax-like effect
-       3.) Apply colours using CSS variables & var( )
-       4.) Ensure WCAG AA contrast
-    ============================================================= */
+
 .hero {
     min-height: 60vh;
     width: 85%;
@@ -112,7 +116,7 @@ header {
 .hero p {
     max-width: 60ch;
     margin: 0 auto 1.25rem;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .btn {
@@ -138,6 +142,11 @@ header {
 
 .card h3 {
     margin-top: 0;
+    color: var(--secondary);
+}
+
+.card p {
+    color: var(--text);
 }
 
 footer {
