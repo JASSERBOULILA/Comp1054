@@ -20,3 +20,548 @@
     --light-grey: #eee9e5;
     --shadow: 0 18px 45px rgba(44, 19, 11, 0.16);
 }
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Fredoka", sans-serif;
+    line-height: 1.15;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.section-container {
+    width: min(1180px, 90%);
+    margin-inline: auto;
+}
+
+.section-label {
+    color: var(--red);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.yellow-label {
+    color: var(--yellow);
+}
+
+/* =========================================
+   Header and navigation
+   ========================================= */
+
+.main-header {
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(75, 37, 24, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    min-height: 86px;
+    width: min(1180px, 90%);
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.main-logo {
+    height: 55px;
+    object-fit: contain;
+    width: 120px;
+}
+
+.navigation-list {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navigation-list a {
+    color: var(--brown);
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+
+.navigation-list a::after {
+    background-color: var(--red);
+    bottom: -7px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.navigation-list a:hover::after,
+.navigation-list a:focus::after {
+    transform: scaleX(1);
+}
+
+/* =========================================
+   Hero section
+   ========================================= */
+
+.hero-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 210, 28, 0.28),
+            transparent 26%
+        ),
+        linear-gradient(135deg, var(--brown), var(--dark-brown));
+    color: var(--white);
+    min-height: 680px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-container {
+    align-items: center;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1.05fr 0.95fr;
+    margin-inline: auto;
+    min-height: 680px;
+    padding-block: 5rem 7rem;
+    width: min(1180px, 90%);
+}
+
+.small-heading {
+    color: var(--yellow);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(3.4rem, 7vw, 6.5rem);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.hero-content h1 span {
+    color: var(--yellow);
+    display: block;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.12rem;
+    max-width: 580px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button {
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0.8rem 1.7rem;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    transform: translateY(-4px);
+}
+
+.primary-button {
+    background-color: var(--yellow);
+    color: var(--dark-brown);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+    background-color: var(--white);
+}
+
+.secondary-button {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--white);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: var(--white);
+    color: var(--brown);
+}
+
+.hero-image-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    position: relative;
+}
+
+.hero-image {
+    filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.32));
+    max-height: 510px;
+    object-fit: contain;
+    position: relative;
+    transform: rotate(4deg);
+    width: 100%;
+    z-index: 3;
+}
+
+.candy-circle {
+    align-items: center;
+    border: 4px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+    color: var(--white);
+    display: flex;
+    font-family: "Fredoka", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 95px;
+    justify-content: center;
+    position: absolute;
+    text-transform: lowercase;
+    width: 95px;
+}
+
+.red-circle {
+    background-color: var(--red);
+    left: 1%;
+    top: 8%;
+    transform: rotate(-14deg);
+}
+
+.yellow-circle {
+    background-color: var(--yellow);
+    color: var(--white);
+    right: 3%;
+    top: 18%;
+    transform: rotate(12deg);
+}
+
+.blue-circle {
+    background-color: var(--blue);
+    bottom: 7%;
+    right: 9%;
+    transform: rotate(-8deg);
+}
+
+.wave-divider {
+    background-color: var(--light-cream);
+    border-radius: 50% 50% 0 0;
+    bottom: -55px;
+    height: 100px;
+    left: -5%;
+    position: absolute;
+    width: 110%;
+}
+
+/* =========================================
+   About section
+   ========================================= */
+
+.about-section {
+    padding-block: 8rem;
+}
+
+.about-container {
+    align-items: center;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-image-container {
+    position: relative;
+}
+
+.about-image-container::before {
+    background-color: var(--yellow);
+    border-radius: 2rem;
+    content: "";
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    top: 20px;
+    transform: rotate(-3deg);
+    width: 100%;
+    z-index: -1;
+}
+
+.about-image {
+    aspect-ratio: 4 / 3;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    width: 100%;
+}
+
+.about-content h2 {
+    color: var(--brown);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    color: var(--grey-text);
+}
+
+.text-link {
+    color: var(--red);
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.text-link span {
+    display: inline-block;
+    margin-left: 0.35rem;
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover span {
+    transform: translateX(7px);
+}
+
+/* =========================================
+   Flavours and product cards
+   ========================================= */
+
+.flavours-section {
+    background-color: var(--cream);
+    padding-block: 7rem;
+}
+
+.section-heading {
+    margin: 0 auto 3.5rem;
+    max-width: 760px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--brown);
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    margin-bottom: 1rem;
+}
+
+.section-heading > p:last-child {
+    color: var(--grey-text);
+}
+
+.flavour-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.flavour-card {
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    min-height: 470px;
+    overflow: hidden;
+    position: relative;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.flavour-card:hover {
+    box-shadow: 0 26px 55px rgba(44, 19, 11, 0.25);
+    transform: translateY(-12px);
+}
+
+.product-image-container {
+    align-items: center;
+    display: flex;
+    height: 240px;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.product-image-container img {
+    filter: drop-shadow(0 18px 15px rgba(0, 0, 0, 0.24));
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+    width: 100%;
+}
+
+.flavour-card:hover img {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.card-content {
+    padding: 0 1.7rem 2rem;
+}
+
+.card-number {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-content p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+}
+
+.red-card {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.yellow-card {
+    background-color: var(--yellow);
+    color: var(--dark-brown);
+}
+
+.blue-card {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.orange-card {
+    background-color: var(--orange);
+    color: var(--dark-brown);
+}
+
+/* =========================================
+   Fun facts section
+   ========================================= */
+
+.facts-section {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 210, 28, 0.18),
+            transparent 25%
+        ),
+        var(--dark-brown);
+    color: var(--white);
+    padding-block: 7rem;
+}
+
+.light-heading h2 {
+    color: var(--white);
+}
+
+.light-heading > p:last-child {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.facts-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-card {
+    background-color: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.6rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.fact-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px);
+}
+
+.fact-icon {
+    align-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    display: flex;
+    font-family: "Fredoka", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 78px;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    width: 78px;
+}
+
+.red-candy {
+    background-color: var(--red);
+}
+
+.yellow-candy {
+    background-color: var(--yellow);
+}
+
+.green-candy {
+    background-color: var(--green);
+}
+
+.blue-candy {
+    background-color: var(--blue);
+}
+
+.fact-card h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.8rem;
+}
+
+.fact-card p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
