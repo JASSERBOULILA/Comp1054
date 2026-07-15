@@ -1,0 +1,22 @@
+/* =========================================
+   Global variables and basic reset
+   ========================================= */
+
+:root {
+    --brown: #4b2518;
+    --dark-brown: #28120c;
+    --medium-brown: #6f3824;
+    --red: #d8232a;
+    --dark-red: #ad171d;
+    --yellow: #ffd21c;
+    --green: #3d9c42;
+    --blue: #1478c8;
+    --orange: #ed7a23;
+    --cream: #fff7e8;
+    --light-cream: #fffdf8;
+    --white: #ffffff;
+    --dark-text: #24120d;
+    --grey-text: #665b57;
+    --light-grey: #eee9e5;
+    --shadow: 0 18px 45px rgba(44, 19, 11, 0.16);
+}
