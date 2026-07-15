@@ -565,3 +565,61 @@ p {
     font-size: 0.9rem;
     margin-bottom: 0;
 }
+
+
+
+/* =========================================
+   responsive design
+   ========================================= */
+
+@media (max-width: 520px) {
+
+    .main-logo {
+        height: 48px;
+    }
+
+    .navigation-list {
+        font-size: 0.85rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-image-container {
+        min-height: 300px;
+    }
+
+    .hero-image {
+        max-height: 300px;
+    }
+
+    .candy-circle {
+        font-size: 1.5rem;
+        height: 58px;
+        width: 58px;
+    }
+
+    .flavour-grid,
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flavour-card {
+        min-height: 440px;
+    }
+
+    .section-heading h2,
+    .about-content h2{
+        font-size: 2.4rem;
+    }
+}
